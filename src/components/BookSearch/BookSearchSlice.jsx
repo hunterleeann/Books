@@ -9,8 +9,17 @@ const LibraryApi = libraryApi.injectEndpoints({
                 method: "GET", 
             }),
             providesTag: ["Books"],
+        }),
+        getCovers: builder.query({
+            query: (value) => ({
+                url: `/b/isbn/${value}-S.jpg`, 
+                method: "GET", 
+            }),
+            providesTag: ["Books"],
         })
+        
     })
+    
 })
 
 const bookSlice = createSlice({
@@ -24,6 +33,6 @@ const bookSlice = createSlice({
   
   export default bookSlice.reducer;
   
-  export const { useGetSearchResultsQuery,  } =
+  export const { useGetSearchResultsQuery, useGetCoversQuery,  } =
   libraryApi;
   

@@ -1,0 +1,4 @@
+.pageResults {
+  display: grid;
+  justify-items: start; 
+}
