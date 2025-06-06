@@ -21,7 +21,8 @@ export default function GetSearchTerm() {
       const submit = (e) => {
         e.preventDefault();
         setSearchTerm(form.search);
-        console.log("searchTerm ", searchTerm);
+        console.log("searchTerm ", searchTerm); 
+        <BookSearch searchResults={searchResults}/>
       };
     
       const change = (e) => {
@@ -45,7 +46,7 @@ export default function GetSearchTerm() {
         </label>
         <input type="submit" value="submit" />
       </form> 
-      <BookSearch searchResults={searchResults}/>
+      {/* <BookSearch searchResults={searchResults}/> */}
     </div>
   )
 }
