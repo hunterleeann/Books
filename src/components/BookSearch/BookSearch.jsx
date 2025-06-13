@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import GetCovers from "./GetCovers";
 import "./BookSearch.css";
 
 export default function BookSearch({ searchResults }) {
@@ -11,16 +10,16 @@ export default function BookSearch({ searchResults }) {
   const showingItems = searchResults?.docs?.slice(startingIndex, endIndex);
 
   return (
-    <div> 
-        <div>
+    <div>
+      <div>
         <button
-          class="btn btn-light"
+          className="btn btn-light"
           onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 0))}
         >
           Previous
         </button>
         <button
-          class="btn btn-light"
+          className="btn btn-light"
           onClick={() => setCurrentPage((prev) => prev + 1)}
         >
           Next
@@ -30,15 +29,20 @@ export default function BookSearch({ searchResults }) {
       <div>
         {showingItems &&
           showingItems.map((res) => (
-            <div className="pageResults">
+            <div className="pageResults"> 
+               <img
+                className="cover"
+                src={`https://covers.openlibrary.org/b/ID/${res.cover_i}-M.jpg`}
+                alt={res.title}
+              />
               <h3>Title: {res.title}</h3>
               <h3>Author: {res.author_name}</h3>
-              {/* <img src={res.cover_i} alt={res.title} /> */}
-              {/* <GetCovers key={res.} objectID={objectID} /> */}
+              {/* <h3>cover: {res.cover_i}</h3> */}
+              {console.log("res.cover_i", res.cover_i)}
+              {console.log("typeof res.cover_i", typeof res.cover_i)}
             </div>
           ))}
       </div>
-      
     </div>
   );
 }

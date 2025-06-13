@@ -1,4 +1,9 @@
 .pageResults {
   display: grid;
-  justify-items: start; 
+  justify-items: start;
 }
+
+/* .cover:hover{
+ content: url('https://covers.openlibrary.org/b/ID/10521270-L.jpg') ; 
+
+} */
