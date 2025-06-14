@@ -5,8 +5,8 @@ import BookSearch from "./BookSearch";
 
 export default function GetSearchTerm() {
   const [searchTerm, setSearchTerm] = useState();
-  const { data: searchResults, isSuccess } =
-    useGetSearchResultsQuery(searchTerm);
+  const { data: searchResults, isSuccess } = 
+    useGetSearchResultsQuery(searchTerm);  
 
   const [form, setForm] = useState({ search: "" });
   const [searchRes, setSearchRes] = useState();

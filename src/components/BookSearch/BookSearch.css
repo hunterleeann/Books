@@ -1,9 +1,37 @@
-.pageResults {
-  display: grid;
-  justify-items: start;
-}
-
 /* .cover:hover{
  content: url('https://covers.openlibrary.org/b/ID/10521270-L.jpg') ; 
 
-} */
+}  */
+
+/* body {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.wallpapersafari.com%2F72%2F0%2F6cx85a.jpg&f=1&nofb=1&ipt=dd8a40b809133a7ab60f02fc41be1275ea7e29ef9eb2da7fdbd6414b53326513");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}  */
+
+.Container {
+  display: flex;
+  flex-wrap: wrap; 
+  margin: 10px 60px;
+  /* justify-content: space-evenly; */
+  align-items: flex-end; 
+  /* margin: 10px;  */
+}
+
+h3 {
+  /* color: black;
+  transform: rotate(-90deg);  */
+  font-size: small;
+  /* word-break: break-all;  */
+} 
+
+img{
+    height: 155px; 
+
+}
+
+.pageResults { 
+    margin: 10px; 
+  /* content: url('https://covers.openlibrary.org/b/ID/10521270-L.jpg')
+    sdisplay: grid;  */  
+}
